@@ -1,26 +1,19 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="6">
+  <v-container fluid fill-height>
+    <v-row align="center" justify="center">
+      <v-col cols="12" sm="6" class="text-center">
         <h2>Welcome to the Tech Interview</h2>
-        Youre doing great so far. Keep it up.
-        <v-img
-          alt="Cat with hat"
-          class="shrink mr-2"
-          contain
-          src="../assets/catmeme.jpg"
-          transition="scale-transition"
-          width="100%"
-        />
+        <p>You're doing great so far. Keep it up.</p>
+        <v-card>
+          <v-img
+            alt="Cat with hat"
+            class="shrink"
+            contain
+            src="../assets/catmeme.jpg"
+            transition="scale-transition"
+          />
+        </v-card>
       </v-col>
-      <v-col cols="6">
-    <v-row>
-    Something seems to be wrong. There should be a nav up there ^^^
-    </v-row>
-    <v-row>
-      Add a nav to the view /data.
-    </v-row>
-    </v-col>
     </v-row>
   </v-container>
 </template>
@@ -83,3 +76,10 @@ export default {
   }),
 };
 </script>
+
+<style>
+.shrink {
+  width: 70%;
+  margin: 0 auto;
+}
+</style>

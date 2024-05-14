@@ -20,8 +20,11 @@
           width="100"
         />
       </div>
-
       <v-spacer></v-spacer>
+
+      <div>
+        <nav-bar-menu :items="items" />
+      </div>
     </v-app-bar>
 
     <v-main>
@@ -31,11 +34,19 @@
 </template>
 
 <script>
+import NavBarMenu from "./components/NavBarMenu.vue";
+
 export default {
   name: "App",
-
   data: () => ({
-    //
+    items: [
+      { title: "Home", path: "/" },
+      { title: "Data Table", path: "/datatable" },
+      { title: "About", path: "/about" },
+    ],
   }),
+  components: {
+    NavBarMenu,
+  },
 };
 </script>
